@@ -82,3 +82,6 @@ RewriteRule ^first-steps-guide.md https://git.rwth-aachen.de/nfdi4ing/metadata4i
 # No content-negotiation at all (or HTML): Fallback to HTML for both versioned and non-versioned
 RewriteRule ^$ https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing [R=303,L,NE]
 RewriteRule ^([0-9]).([0-9]).([0-9]) https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/$1.$2.$3/index.html [R=303,L,NE]
+
+# Serve TTL snippets     
+RewriteRule ^(.*) https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/snippets/mi4_$1.ttl [R=303,L,NE]
